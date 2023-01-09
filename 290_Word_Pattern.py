@@ -30,3 +30,12 @@ s does not contain any leading or trailing spaces.
 All the words in s are separated by a single space.
 
 """
+
+
+class Solution:
+    def wordPattern(self, pattern,str):
+        str = str.split(' ')
+        if  not len(str) == len(pattern):
+                return False
+        return len(set(zip(pattern, str))) == len(set(str)) == len(set(pattern))
+        
