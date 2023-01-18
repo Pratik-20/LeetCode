@@ -34,3 +34,20 @@ n == nums.length
 1 <= n <= 3 * 104
 -3 * 104 <= nums[i] <= 3 * 104
 """
+class Solution:
+    def maxSubarraySumCircular(self, nums: List[int]) -> int:
+        first_ele = nums[0]                   # Access Initial Element of List Because We have to deal with a Circular Subarray
+        curr_first_ele = nums[0]
+        mi = nums[0]
+        curr_mi = nums[0]
+        for i in nums[1:]:
+
+            curr_first_ele = max(i,curr_first_ele+i)
+            first_ele = max(curr_first_ele,first_ele)
+            curr_mi = min(i,curr_mi+i)
+            mi = min(curr_mi,mi)
+
+        if sum(nums) == mi:
+            return first_ele
+        
+        return max(first_ele,sum(nums)-mi)
