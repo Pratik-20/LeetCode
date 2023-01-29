@@ -1,4 +1,4 @@
-"""
+/*
 595. Big Countries
 
 Easy
@@ -52,11 +52,11 @@ Output:
 | Algeria     | 37100000   | 2381741 |
 +-------------+------------+---------+
 
-"""
+*/
 
 # Write your MySQL query statement below
 
-SELECT name,area,population                 # returnin data
-FROM World                                  # Data table name
-WHERE area >= 3000000                       # Condition 1
-OR population >= 25000000                   # Condition 2
+SELECT name,area,population                 -- returnin data
+FROM World                                  -- Data table name
+WHERE area >= 3000000                       -- Condition 1
+OR population >= 25000000                   -- Condition 2
