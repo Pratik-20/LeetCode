@@ -56,7 +56,7 @@ Output:
 
 # Write your MySQL query statement below
 
-SELECT name,area,population                 # returnin data & required data
+SELECT name,area,population                 # returnin data
 FROM World                                  # Data table name
 WHERE area >= 3000000                       # Condition 1
 OR population >= 25000000                   # Condition 2
