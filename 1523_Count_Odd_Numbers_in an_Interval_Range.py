@@ -46,7 +46,7 @@ class Solution:
             return int(((high - low)/2)+1)
 """
 
-Solution 2 - Time Limit Exceed Error
+#Solution 2 - Time Limit Exceed Error
 
 """
 
