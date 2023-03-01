@@ -1,4 +1,8 @@
 """
+20. Valid_Parentheses 
+
+Easy 
+
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 An input string is valid if:
@@ -24,7 +28,6 @@ Output: false
 """
 class Solution:
     def isValid(self, s: str) -> bool:
-        if:
-            return False
-        else:
-            return True
+        while '()' in s or '[]'in s or '{}' in s:
+            s = s.replace('()','').replace('[]','').replace('{}','')
+        return False if len(s) !=0 else True
