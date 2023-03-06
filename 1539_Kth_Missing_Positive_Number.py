@@ -28,3 +28,11 @@ arr[i] < arr[j] for 1 <= i < j <= arr.length
 
 
 """
+class Solution:
+    def findKthPositive(self, arr: List[int], k: int) -> int:
+        def cl():                         # Function created to # Create a list to store no.1 - 2500 
+            return list(range(1,2500))    # cl - Create_List
+        cl()                              # Function call
+        arr = set(cl())- set(arr)         # Make a substraction from set of cl - set of array given 
+        return(list (arr)[k-1])           # Return element arr in the form of list element 
+        # Above set to list conversion
