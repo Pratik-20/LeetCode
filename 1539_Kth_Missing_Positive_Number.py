@@ -28,6 +28,23 @@ arr[i] < arr[j] for 1 <= i < j <= arr.length
 
 
 """
+# Solution: 1  - Using Array, Binary search
+class Solution:
+    def findKthPositive(self, arr: List[int], k: int) -> int:
+        left, right = 0, len(arr) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            missing = arr[mid] - mid - 1
+            if missing < k:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return right + k + 1
+
+       
+"""  
+Solution: 2 
+
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
         def cl():                         # Function created to # Create a list to store no.1 - 2500 
@@ -36,3 +53,4 @@ class Solution:
         arr = set(cl())- set(arr)         # Make a substraction from set of cl - set of array given 
         return(list (arr)[k-1])           # Return element arr in the form of list element 
         # Above set to list conversion
+"""
